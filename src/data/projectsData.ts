@@ -15,6 +15,19 @@ export interface Project {
 export const projectsData: Project[] = [
   {
     id: 1,
+    title: "Shifa - منصة التشخيص الطبي الذكي",
+    description: "منصة طبية ذكية متكاملة (HealthTech Platform) تستخدم الذكاء الاصطناعي لتحليل الأعراض وتقديم تشخيص مبدئي مع تحديد التخصص الطبي المناسب. تدعم العربية بالكامل (RTL) وتتميز بنظام Gamification لتحفيز المستخدمين على متابعة صحتهم.",
+    image: "https://raw.githubusercontent.com/AliMahmoudDev/Shifa/main/public/homepage.png",
+    technologies: ["Next.js 16", "TypeScript", "Tailwind CSS", "Shadcn/ui", "Prisma ORM", "PostgreSQL", "Google Gemini AI", "JWT Authentication"],
+    liveUrl: "https://shifa-five.vercel.app/",
+    githubUrl: "https://github.com/AliMahmoudDev/shifa",
+    featured: true,
+    challenge: "بناء منصة طبية ذكية تدمج الذكاء الاصطناعي مع واجهة مستخدم عربية سلسة كان تحدياً كبيراً. المشروع احتاج لتصميم نظام تحليل أعراض دقيق، معالجة JSON responses من AI models، ضمان RTL support كامل، وتوفير تجربة مستخدم احترافية مع Dark/Light mode.",
+    solution: "استخدمت Next.js 16 مع TypeScript لبناء تطبيق متين، و Shadcn/ui مع Tailwind CSS لتصميم UI عصري. دمجت Google Gemini AI للتحليل الذكي مع نظام fallback للـ demo. صممت قاعدة بيانات Prisma مع PostgreSQL، ونظام JWT للمصادقة الآمنة. كل الـ components تدعم RTL بشكل كامل.",
+    lessons: "تعلمت الكثير عن دمج AI models في التطبيقات العملية، أهمية error handling المتقدم مع APIs، وكيفية بناء scalable architecture. كمان اكتشفت أهمية TypeScript في المشاريع الكبيرة وكيف أن الـ type safety بيقلل bugs بشكل ملحوظ. المشروع علمني إن UX العربي محتاج اهتمام خاص.",
+  },
+  {
+    id: 2,
     title: "React E-Commerce",
     description: "A full-featured e-commerce application built with React.js featuring product filtering, shopping cart functionality, and responsive design. Implements modern React patterns and state management for a seamless shopping experience.",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
@@ -27,7 +40,7 @@ export const projectsData: Project[] = [
     lessons: "This project taught me the importance of proper state architecture in React applications. I learned how to optimize re-renders using React.memo and useMemo, and gained experience in building scalable component hierarchies. The importance of user feedback through loading states and animations became clear.",
   },
   {
-    id: 2,
+    id: 3,
     title: "Quran Reels Generator",
     description: "An automated Python-based tool to create high-quality Islamic short videos with safe background filters and smart randomization. Perfect for creating engaging Quranic content for social media platforms.",
     image: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=800&q=80",
@@ -40,7 +53,7 @@ export const projectsData: Project[] = [
     lessons: "Working on this project deepened my understanding of video processing pipelines and the importance of cultural sensitivity in design. I learned how to work with Arabic text rendering programmatically and gained experience in building automated content generation systems. The project showed me how automation can help content creators scale their work.",
   },
   {
-    id: 3,
+    id: 4,
     title: "React Movies App",
     description: "A dynamic movies discovery application built with React.js that allows users to browse, search, and explore movies. Features a modern UI with movie details, ratings, and responsive design.",
     image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80",
@@ -52,19 +65,6 @@ export const projectsData: Project[] = [
     solution: "Implemented a service layer with Axios for API calls, including request interceptors for error handling and response caching. Built reusable components for movie cards, search bars, and detail modals. Used React's useEffect and useState hooks for data fetching with proper cleanup. Added loading skeletons for better perceived performance.",
     lessons: "This project enhanced my API integration skills and taught me the importance of error boundaries in React applications. I learned about API rate limiting strategies, caching mechanisms, and how to build responsive layouts that adapt to different screen sizes. The importance of accessibility in web applications became a key focus.",
   },
-  {
-    id: 4,
-    title: "Capital Shop E-Commerce",
-    description: "A responsive fashion e-commerce landing page built with Semantic HTML5, CSS3 using BEM methodology, and Vanilla JavaScript. Features modern design with smooth animations and mobile-first approach.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
-    technologies: ["HTML5", "CSS3", "JavaScript ES6", "BEM Methodology", "Responsive Design", "CSS Animations"],
-    liveUrl: "https://alimahmouddev.github.io/capital-shop-ecommerce/",
-    githubUrl: "https://github.com/AliMahmoudDev/capital-shop-ecommerce",
-    featured: false,
-    challenge: "Creating a visually stunning e-commerce landing page using only vanilla HTML, CSS, and JavaScript while maintaining clean, maintainable code. The challenge was to implement modern UI patterns and smooth animations without relying on frameworks or libraries.",
-    solution: "Applied BEM (Block Element Modifier) methodology for CSS architecture, ensuring scalable and maintainable stylesheets. Used CSS custom properties for theming consistency. Implemented smooth scroll, intersection observer for scroll animations, and CSS transforms for hover effects. Built a mobile-first responsive layout using CSS Grid and Flexbox.",
-    lessons: "This project solidified my understanding of fundamental web technologies and the importance of semantic HTML for SEO and accessibility. I learned how BEM methodology helps maintain large CSS codebases and the power of CSS animations for creating engaging user experiences. Understanding the basics deeply helps when working with frameworks later.",
-  },
 ];
 
 export const techStack = {
@@ -75,12 +75,14 @@ export const techStack = {
     { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
     { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
     { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+    { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
   ],
   backend: [
     { name: "REST APIs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
     { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
     { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
     { name: "Flask", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" },
+    { name: "Prisma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" },
   ],
   tools: [
     { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
