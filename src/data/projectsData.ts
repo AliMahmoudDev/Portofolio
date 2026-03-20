@@ -45,7 +45,7 @@ export const projectsData: Project[] = [
     description: "An automated Python-based tool to create high-quality Islamic short videos with safe background filters and smart randomization. Perfect for creating engaging Quranic content for social media platforms.",
     image: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=800&q=80",
     technologies: ["Python", "MoviePy", "PIL/Pillow", "Automation", "Video Processing", "FFmpeg"],
-    liveUrl: "https://huggingface.co/spaces/Ali112009/Quran_Reels_Generator",
+    liveUrl: "https://huggingface.co/spaces/Ali112008/Quran-Reels-Generator",
     githubUrl: "https://github.com/AliMahmoudDev/Quran-Reels-Generator",
     featured: true,
     challenge: "Creating an automated video generation system that produces aesthetically pleasing content while respecting the sacred nature of Quranic verses. The challenge was to implement smart background selection, proper text rendering with Arabic calligraphy fonts, and video composition that works across different social media platforms.",
