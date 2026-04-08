@@ -8,7 +8,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const SITE_URL = "https://portfolio-gray-ten-54.vercel.app";
+const SITE_URL = "https://alimahmoud-dev.vercel.app";
 
 export const viewport: Viewport = {
   themeColor: "#020617",
