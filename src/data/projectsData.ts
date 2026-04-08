@@ -18,7 +18,7 @@ export const projectsData: Project[] = [
     title: "Shifa - Smart Medical Diagnosis",
     description:
       "HealthTech Platform using AI for symptom analysis and preliminary diagnosis with full Arabic RTL support. Built with a focus on accessibility and user experience for Arabic-speaking users.",
-    image: "/projects/shifa.png",
+    image: "/projects/shifa.webp",
     technologies: ["TypeScript", "Next.js", "Tailwind CSS", "AI Integration", "REST API"],
     liveUrl: "https://shifa-five.vercel.app/",
     githubUrl: "https://github.com/AliMahmoudDev/Shifa",
@@ -35,7 +35,7 @@ export const projectsData: Project[] = [
     title: "React E-Commerce",
     description:
       "Full-featured e-commerce application built with React.js featuring product filtering, shopping cart, and responsive design. Includes product search, category filtering, and a streamlined checkout flow.",
-    image: "/projects/ecommerce.png",
+    image: "/projects/ecommerce.webp",
     technologies: ["JavaScript", "React.js", "CSS3", "Context API"],
     liveUrl: "https://react-ecommerce-delta-teal.vercel.app/",
     githubUrl: "https://github.com/AliMahmoudDev/React-E-Commerce",
@@ -52,7 +52,7 @@ export const projectsData: Project[] = [
     title: "Quran Reels Generator",
     description:
       "Automated Python tool to create high-quality Islamic short videos with smart randomization for social media. Generates engaging Quran content with beautiful typography and backgrounds.",
-    image: "/projects/quran-reels.png",
+    image: "/projects/quran-reels.webp",
     technologies: ["Python", "MoviePy", "PIL/Pillow", "Automation"],
     liveUrl: "https://huggingface.co/spaces/Ali112008/Quran-Reels-Generator",
     githubUrl: "https://github.com/AliMahmoudDev/Quran-Reels-Generator",
@@ -69,7 +69,7 @@ export const projectsData: Project[] = [
     title: "React Movies App",
     description:
       "Dynamic movies discovery application with TMDB API integration, search functionality, ratings display, and responsive design. Features trending movies, genre filtering, and detailed movie information.",
-    image: "/projects/movies.png",
+    image: "/projects/movies.webp",
     technologies: ["JavaScript", "React.js", "CSS3", "TMDB API"],
     liveUrl: "https://react-movies-app-lilac.vercel.app/",
     githubUrl: "https://github.com/AliMahmoudDev/React-Movies-App",

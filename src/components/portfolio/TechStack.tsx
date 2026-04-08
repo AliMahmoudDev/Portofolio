@@ -32,6 +32,7 @@ function TechItem({ name, icon, index }: TechItemProps) {
           height={40}
           className="object-contain group-hover:scale-110 transition-transform duration-300"
           loading="lazy"
+          fetchPriority="low"
         />
       </div>
       <span className="text-xs font-medium text-gray-400 group-hover:text-white transition-colors text-center">

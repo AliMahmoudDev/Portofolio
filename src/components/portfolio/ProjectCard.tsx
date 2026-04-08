@@ -38,7 +38,9 @@ export default function ProjectCard({
           src={project.image}
           alt={project.title}
           fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover group-hover:scale-110 transition-transform duration-700"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
 

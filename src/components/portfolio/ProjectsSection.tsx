@@ -2,10 +2,14 @@
 
 import { useState } from "react";
 import { motion, useInView } from "framer-motion";
+import dynamic from "next/dynamic";
 import { useRef } from "react";
 import { projectsData, type Project } from "@/data/projectsData";
 import ProjectCard from "@/components/portfolio/ProjectCard";
-import ProjectModal from "@/components/portfolio/ProjectModal";
+
+const ProjectModal = dynamic(() => import("@/components/portfolio/ProjectModal"), {
+  ssr: false,
+});
 
 export default function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);

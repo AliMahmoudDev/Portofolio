@@ -79,9 +79,10 @@ export default function Hero() {
             />
             <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-2 border-white/20">
               <Image
-                src="/profile.png"
+                src="/profile.webp"
                 alt="Ali Mahmoud - Front-End React Developer"
                 fill
+                sizes="(max-width: 640px) 192px, (max-width: 1024px) 224px, 256px"
                 className="object-cover"
                 priority
               />
