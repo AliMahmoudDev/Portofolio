@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronDown, Download, ArrowRight } from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -154,17 +154,6 @@ export default function Hero() {
                 <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
 
-              {/* Download CV Button */}
-              <motion.a
-                href="/Ali_Mahmoud_CV.pdf"
-                download
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="group inline-flex items-center gap-2 px-8 py-4 border border-white/20 rounded-xl font-semibold text-white hover:bg-white/5 hover:border-white/40 transition-all duration-300"
-              >
-                <Download className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" />
-                Download CV
-              </motion.a>
             </motion.div>
 
             {/* Stats */}
