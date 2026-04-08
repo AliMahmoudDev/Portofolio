@@ -1,9 +1,15 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, FormEvent } from "react";
 import { motion, useInView } from "framer-motion";
 import { Send, Mail, MapPin, Phone, CheckCircle, AlertCircle, Github, Linkedin, Facebook, Instagram } from "lucide-react";
 import { socialLinks } from "@/data/projectsData";
+
+const EMAILJS_CONFIG = {
+  serviceId: "service_bp41a25",
+  templateId: "template_81917c4",
+  publicKey: "_0xg0RrJXx-Jdo9J_",
+};
 
 export default function ContactForm() {
   const sectionRef = useRef(null);
@@ -12,7 +18,6 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -24,43 +29,35 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setStatus("sending");
     setErrorMessage("");
 
     try {
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-        to_name: "Ali Mahmoud",
-      };
+      const emailjs = await import("@emailjs/browser");
 
-      // EmailJS integration
-      // Replace these with your actual EmailJS credentials
-      const emailjsResponse = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const result = await emailjs.send(
+        EMAILJS_CONFIG.serviceId,
+        EMAILJS_CONFIG.templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: socialLinks.email,
         },
-        body: JSON.stringify({
-          service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID",
-          template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID",
-          user_id: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY",
-          template_params: templateParams,
-        }),
-      });
+        EMAILJS_CONFIG.publicKey
+      );
 
-      if (!emailjsResponse.ok) {
+      if (result.status === 200) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
         throw new Error("Failed to send message");
       }
-
-      setStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setTimeout(() => setStatus("idle"), 5000);
-    } catch {
+    } catch (error) {
+      console.error("EmailJS error:", error);
       setStatus("error");
       setErrorMessage("Something went wrong. Please try again or email me directly.");
       setTimeout(() => {
@@ -233,26 +230,6 @@ export default function ContactForm() {
                     className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all duration-200"
                   />
                 </div>
-              </div>
-
-              {/* Subject */}
-              <div>
-                <label
-                  htmlFor="subject"
-                  className="block text-sm font-medium text-gray-300 mb-2"
-                >
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  placeholder="Project Collaboration"
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all duration-200"
-                />
               </div>
 
               {/* Message */}
