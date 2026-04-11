@@ -76,12 +76,21 @@ function ExperienceItem({
 const experienceData = [
   {
     icon: <GraduationCap className="w-6 h-6" />,
-    title: "Front-End Development Training",
-    subtitle: "Intensive Self-Study Program",
+    title: "Front-End (React) Diploma",
+    subtitle: "Instant Software Solutions",
     description:
-      "Completed a rigorous front-end development training program covering advanced React.js patterns, Next.js App Router, TypeScript, and modern CSS frameworks. Focused on building production-ready applications with best practices for performance, accessibility, and SEO.",
-    date: "2024 – Present",
-    technologies: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Git"],
+      "Enrolled in a comprehensive front-end development diploma covering the full web development stack from fundamentals to advanced concepts. The program spans HTML5, CSS3, JavaScript ES6+, Bootstrap 5, Sass, and Tailwind CSS, with deep dives into React.js including JSX, components, hooks, state management, routing, and Redux Toolkit. Also covers UI/UX design with Adobe XD, system analysis with ERD and UML diagrams, and professional skills including CV writing, freelancing, and job interview preparation.",
+    date: "Dec 2025 – Present",
+    technologies: ["React.js", "Redux Toolkit", "JavaScript", "Tailwind CSS", "Sass", "HTML5", "CSS3"],
+  },
+  {
+    icon: <Briefcase className="w-6 h-6" />,
+    title: "Front-End Development Intern",
+    subtitle: "Instant Software Solutions",
+    description:
+      "Upcoming one-month intensive internship as part of the diploma program at Instant Software Solutions. Will work on real-world projects using collaborative platforms like GitHub, Slack, and Trello, applying modern development practices including design patterns, algorithms, and data structures to build production-ready web applications.",
+    date: "Upcoming",
+    technologies: ["React.js", "JavaScript", "Git", "Agile", "REST APIs"],
   },
   {
     icon: <BookOpen className="w-6 h-6" />,
@@ -94,21 +103,12 @@ const experienceData = [
   },
   {
     icon: <Code2 className="w-6 h-6" />,
-    title: "Self-Directed Project Development",
-    subtitle: "Personal Portfolio & Open Source",
+    title: "Personal Projects & Open Source",
+    subtitle: "Self-Directed Development",
     description:
-      "Built multiple full-stack and front-end projects from scratch, including an AI-powered medical diagnosis platform, e-commerce application, and various React.js projects. Actively learning and applying new technologies through hands-on practice.",
+      "Built multiple front-end projects from scratch to apply and expand the skills learned throughout the diploma and self-study. Projects include an AI-powered medical diagnosis platform (Shifa), a full-featured React e-commerce application, a TMDB movies discovery app, and a Python-based Quran Reels Generator. Each project focuses on clean code, responsive design, and modern best practices.",
     date: "2024 – Present",
-    technologies: ["React.js", "Next.js", "JavaScript", "CSS3", "REST APIs"],
-  },
-  {
-    icon: <Briefcase className="w-6 h-6" />,
-    title: "Freelance Web Development",
-    subtitle: "Independent Developer",
-    description:
-      "Working on freelance web development projects, delivering responsive and performant web solutions for clients. Specializing in React.js and Next.js applications with modern UI/UX design principles.",
-    date: "2024 – Present",
-    technologies: ["React.js", "Next.js", "Tailwind CSS", "Responsive Design", "UI/UX"],
+    technologies: ["React.js", "Next.js", "TypeScript", "Python", "REST APIs"],
   },
 ];
 
